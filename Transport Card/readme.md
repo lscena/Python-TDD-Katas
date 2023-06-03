@@ -7,7 +7,7 @@ Travel from "Retiro" to "Atocha" via the metro.
 Take the 27 bus from "Atocha" to "Puerto Chico".
 Travel from "Atocha" to "Callao" via the metro.
 
-#### Operational details:
+### Operational details:
 
 When the user enters the station through the entry barrier, their transport card will be charged the maximum fare.
 
@@ -46,7 +46,7 @@ Fares Table:
 The maximum possible fare is therefore 3.20 EUR.
 
 
-#### Evaluation Criteria:
+### Evaluation Criteria:
 You will be evaluated based on the following points:
 
 Compliance with Operational Requirements: Your solution should adhere to the specified operational requirements, including the fare calculation, and maximum fare charging.
