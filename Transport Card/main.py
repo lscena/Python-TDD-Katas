@@ -190,25 +190,10 @@ class Card:
 if __name__ == '__main__':
     # initiate the card
     c1 = Card(
-        # Valid:
         name='Julius Brown',
-        # Invalid:
-        # name='Juliu2 Brown',
-        # name='Jul',
-
-        # Valid
         id='65546508',
-        # Invalid:
-        # id='65546508a',
-
-        # Valid:
         initialBalance=0,
-        # initialBalance='.5',
-        # Invalid:
-        # initialBalance='0.5a',
     )
-
-    # c1.addCredit('10.5')
 
     # add 30 EUR of credit:
     c1.addCredit(30.0)
@@ -227,36 +212,3 @@ if __name__ == '__main__':
 
     # check final balance
     print(c1)
-
-
-
-    # # 3 zones travel: (cost 3.20)
-    # c1.passInBarrier(transport='metro', station='Wimbledon')
-    # c1.passExitBarrier(station='Earl’s Court')
-    # print(c1)
-
-    # # 2 zones travel, including zone 1: (cost 3.00)
-    # c1.passInBarrier(transport='metro', station='Wimbledon')
-    # c1.passExitBarrier(station='Holborn')
-    # print(c1)
-
-    # # 2 zones travel, excluding zone 1: (cost 2.25)
-    # c1.passInBarrier(transport='metro', station='Wimbledon')
-    # c1.passExitBarrier(station='Hammersmith')
-    # print(c1)
-
-    # # inside zone 1: (cost 2.50)
-    # c1.passInBarrier(transport='metro', station='Holborn')
-    # c1.passExitBarrier(station='Earl’s Court')
-    # print(c1)
-
-    # # trip in only one zone, but outside zone 1 (cost: 2.00)
-    # c1.passInBarrier(transport='metro', station='Hammersmith')
-    # c1.passExitBarrier(station='Earl’s Court')
-    # print(c1)
-
-    # # no closed trip: (Cost: 3.20 + Other trip cost) 3.20 + 2.00 = 5.20
-    # c1.passInBarrier(transport='metro', station='Holborn')
-    # c1.passInBarrier(transport='metro', station='Hammersmith')
-    # c1.passExitBarrier(station='Earl’s Court')
-    # print(c1)
