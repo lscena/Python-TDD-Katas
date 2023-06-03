@@ -21,18 +21,15 @@ For this test, please utilize the following data:
 
 Stations and Zones Table:
 
-|--------------|------------|
 |   Station    |   Zone(s)  |
 |--------------|------------|
 |   Retiro     |     1      |
 |    Atocha    |    1, 2    |
 |   Barajas    |     3      |
 |   Callao     |     2      |
-|--------------|------------|
 
 Fares Table:
 
-|------------------------------------|----------|
 |             Journey                |   Fare   |
 |------------------------------------|----------|
 |     Anywhere in Zone 1             | 2.50 EUR |
@@ -41,7 +38,6 @@ Fares Table:
 | Any two zones excluding zone 1     | 2.25 EUR |
 |        Any three zones             | 3.20 EUR |
 |         Any bus journey            | 1.80 EUR |
-|------------------------------------|----------|
 
 The maximum possible fare is therefore 3.20 EUR.
 
