@@ -27,16 +27,16 @@ class Card:
     BUS_TICKET = 1.80
 
     METRO_STATIONS = [
-        "Holborn",
-        "Earl’s Court",
-        "Wimbledon",
-        "Hammersmith",
+        "Retiro",
+        "Atocha",
+        "Barajas",
+        "Callao",
     ]
     METRO_STATIONS_ZONES = {
-        "Holborn":[1],
-        "Earl’s Court":[1, 2],
-        "Wimbledon":[3],
-        "Hammersmith":[2],
+        "Retiro":[1],
+        "Atocha":[1, 2],
+        "Barajas":[3],
+        "Callao":[2],
     }
 
     # Create the card
@@ -201,14 +201,14 @@ if __name__ == '__main__':
     print(c1)
 
     # Make some trips:
-    # 1. Tube Holborn to Earl’s Court
-    c1.passInBarrier(transport='metro', station='Holborn')
-    c1.passExitBarrier(station='Earl’s Court')
-    # 2. 328 bus from Earl’s Court to Chelsea
+    # 1. Tube Retiro to Atocha
+    c1.passInBarrier(transport='metro', station='Retiro')
+    c1.passExitBarrier(station='Atocha')
+    # 2. 27 bus from "Atocha" to "Puerto Chico".
     c1.passInBarrier(transport='bus')
-    # 3. Tube Earl’s court to Hammersmith
-    c1.passInBarrier(transport='metro', station='Earl’s Court')
-    c1.passExitBarrier(station='Hammersmith')
+    # 3. Tube Atocha to Callao
+    c1.passInBarrier(transport='metro', station='Atocha')
+    c1.passExitBarrier(station='Callao')
 
     # check final balance
     print(c1)

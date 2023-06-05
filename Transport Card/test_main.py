@@ -34,8 +34,8 @@ class TestTrips(unittest.TestCase):
         initialBalance = 100
         c = main.Card(name=VALID_NAME, id=VALID_ID, initialBalance=initialBalance)
 
-        c.passInBarrier(transport='metro', station='Hammersmith')
-        c.passExitBarrier(station='Earl’s Court')
+        c.passInBarrier(transport='metro', station='Callao')
+        c.passExitBarrier(station='Atocha')
         self.assertEqual(c.balance, round(initialBalance - expectedCost, 2))
 
     def testMetroTripOneZoneInside1(self):
@@ -47,8 +47,8 @@ class TestTrips(unittest.TestCase):
         initialBalance = 100
         c = main.Card(name=VALID_NAME, id=VALID_ID, initialBalance=initialBalance)
 
-        c.passInBarrier(transport='metro', station='Holborn')
-        c.passExitBarrier(station='Earl’s Court')
+        c.passInBarrier(transport='metro', station='Retiro')
+        c.passExitBarrier(station='Atocha')
         self.assertEqual(c.balance, round(initialBalance - expectedCost, 2))
 
     def testMetroTripTwoZonesInclude1(self):
@@ -60,8 +60,8 @@ class TestTrips(unittest.TestCase):
         initialBalance = 100
         c = main.Card(name=VALID_NAME, id=VALID_ID, initialBalance=initialBalance)
 
-        c.passInBarrier(transport='metro', station='Wimbledon')
-        c.passExitBarrier(station='Holborn')
+        c.passInBarrier(transport='metro', station='Barajas')
+        c.passExitBarrier(station='Retiro')
         self.assertEqual(c.balance, round(initialBalance - expectedCost, 2))
 
     def testMetroTripTwoZonesExclude1(self):
@@ -73,8 +73,8 @@ class TestTrips(unittest.TestCase):
         initialBalance = 100
         c = main.Card(name=VALID_NAME, id=VALID_ID, initialBalance=initialBalance)
 
-        c.passInBarrier(transport='metro', station='Wimbledon')
-        c.passExitBarrier(station='Hammersmith')
+        c.passInBarrier(transport='metro', station='Barajas')
+        c.passExitBarrier(station='Callao')
         self.assertEqual(c.balance, round(initialBalance - expectedCost, 2))
 
     def testMetroTripThreeZones(self):
@@ -86,8 +86,8 @@ class TestTrips(unittest.TestCase):
         initialBalance = 100
         c = main.Card(name=VALID_NAME, id=VALID_ID, initialBalance=initialBalance)
 
-        c.passInBarrier(transport='metro', station='Wimbledon')
-        c.passExitBarrier(station='Earl’s Court')
+        c.passInBarrier(transport='metro', station='Barajas')
+        c.passExitBarrier(station='Atocha')
         self.assertEqual(c.balance, round(initialBalance - expectedCost, 2))
 
     def testNoClosedTrip(self):
@@ -99,9 +99,9 @@ class TestTrips(unittest.TestCase):
         initialBalance = 100
         c = main.Card(name=VALID_NAME, id=VALID_ID, initialBalance=initialBalance)
 
-        c.passInBarrier(transport='metro', station='Holborn')
-        c.passInBarrier(transport='metro', station='Hammersmith')
-        c.passExitBarrier(station='Earl’s Court')
+        c.passInBarrier(transport='metro', station='Retiro')
+        c.passInBarrier(transport='metro', station='Callao')
+        c.passExitBarrier(station='Atocha')
         self.assertEqual(c.balance, round(initialBalance - expectedCost, 2))
 
 
